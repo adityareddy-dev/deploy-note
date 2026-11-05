@@ -1,0 +1,23 @@
+modules:
+  jira:issuePanel:
+    - key: deploy-note-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Deploy Note
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+permissions:
+  scopes:
+    - read:jira-work
+    - write:jira-work
+app:
+  runtime:
+    name: nodejs24.x
+  id: ari:cloud:ecosystem::app/00000000-0000-4000-8000-000000000000

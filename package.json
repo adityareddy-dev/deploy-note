@@ -1,0 +1,24 @@
+{
+  "name": "deploy-note",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Put a failed deployment check on the Jira issue being investigated.",
+  "author": "Aditya Reddy",
+  "license": "MIT",
+  "engines": { "node": ">=24.22.1 <25" },
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "lint": "forge lint",
+    "typecheck": "tsc --allowJs --checkJs --jsx react --noEmit --esModuleInterop --skipLibCheck --moduleResolution node --target es2022 src/frontend/index.jsx",
+    "verify": "npm test && npm run typecheck && npm run lint"
+  },
+  "dependencies": {
+    "@forge/api": "8.4.0",
+    "@forge/bridge": "7.2.1",
+    "@forge/react": "12.4.0",
+    "@forge/resolver": "2.0.2",
+    "react": "18.3.1"
+  },
+  "devDependencies": { "@forge/cli": "15.0.0", "typescript": "5.9.3" },
+  "overrides": { "prosemirror-view": "1.42.9", "glob": "14.0.3", "minimatch": "11.0.4" }
+}

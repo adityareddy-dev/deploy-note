@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "checkout-timeout-demo",
+  "demoData": true,
+  "service": "checkout-api",
+  "change": "Release 2026.11.05.1 reduced the payment gateway timeout from 3000 ms to 500 ms.",
+  "logLine": "2026-11-05T10:42:16Z ERROR checkout-api payment_authorization timed out after 500ms request_id=demo-1042",
+  "observedAt": "2026-11-05T10:42:16Z"
+}
