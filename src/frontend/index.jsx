@@ -12,6 +12,7 @@ function App() {
     setBusy(true);
     setError(null);
     setSaved(false);
+    setData(null);
     try {
       const response = /** @type {{ok: boolean, data?: any, error?: {message?: string}}} */ (await invoke(operation));
       if (!response?.ok) throw new Error(response?.error?.message || 'The request failed. Reload the panel and retry.');
